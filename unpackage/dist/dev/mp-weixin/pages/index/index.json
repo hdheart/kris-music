@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "网易云音乐",
+  "usingComponents": {
+    "find": "/pages/find/index"
+  }
+}
