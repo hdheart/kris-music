@@ -130,5 +130,20 @@ export async function getPlaylistMore(reqData) {
 	
 }
 
+export async function getSongDetail(reqData) {
+	try{
+		let res = await requestGet('/song/detail', reqData)
+		if(res.data.code == SUCCESS){
+			return res.data.songs[0];
+			console.log('return data')
+		}else {
+			throw new Error();
+		}
+		
+	}catch(e){
+		console.log('getSongDetail失败', e)
+	}
+}
+
 
 

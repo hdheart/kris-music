@@ -159,7 +159,7 @@ var _default = {
     continue: Boolean, //播放完成后是否继续播放下一首，需定义@next事件
     color: {
       type: String,
-      default: '#169af3' }
+      default: '#faffff' }
     //主色调
   },
   methods: {

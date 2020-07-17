@@ -18,9 +18,9 @@
 		<view v-show="currentIndex == 1"><find :bannerList="bannerList" :personalized="personalized" :personalizedmv="personalizedmv"></find></view>
 		<view v-show="currentIndex == 2"></view>
 		<view v-show="currentIndex == 3"></view>
-		<view class="test" @click="musicClick()">
+		<!-- <view class="test" @click="musicClick()">
 			<text>音乐</text>
-		</view>
+		</view> -->
 		</view>
 </template>
 
@@ -31,8 +31,8 @@ import find from '../find/index.vue';
 // const TYPE = 1;
 const LIMIT = 6;
  var music = null;
-music = uni.createInnerAudioContext(); //创建播放器对象
-music.src= "http://m8.music.126.net/20191121133405/31674ec61fc1adcda70ff0256ca44d50/ymusic/030b/055f/530b/4a0b6f24db25f0a6c1eadad7062df25d.mp3"; //选择播放的音频
+// music = uni.createInnerAudioContext(); //创建播放器对象
+// music.src= "http://m8.music.126.net/20191121133405/31674ec61fc1adcda70ff0256ca44d50/ymusic/030b/055f/530b/4a0b6f24db25f0a6c1eadad7062df25d.mp3"; //选择播放的音频
 
 export default {
 	data() {
@@ -78,10 +78,10 @@ export default {
 			let reqData = {};
 			this.personalizedmv = await getPersonalizedMv(reqData);
 		},
-		musicClick(){
-			music.play();
+		// musicClick(){
+		// 	music.play();
 			
-		},
+		// },
 		//切换tab
 		tabClick(index) {
 			this.currentIndex = index;

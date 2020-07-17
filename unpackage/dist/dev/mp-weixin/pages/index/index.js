@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 17));
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 17));
 
 
 
@@ -168,8 +168,8 @@ var _find = __webpack_require__(/*! api/find.js */ 20);function _interopRequireD
 // const TYPE = 1;
 var LIMIT = 6;
 var music = null;
-music = uni.createInnerAudioContext(); //创建播放器对象
-music.src = "http://m8.music.126.net/20191121133405/31674ec61fc1adcda70ff0256ca44d50/ymusic/030b/055f/530b/4a0b6f24db25f0a6c1eadad7062df25d.mp3"; //选择播放的音频
+// music = uni.createInnerAudioContext(); //创建播放器对象
+// music.src= "http://m8.music.126.net/20191121133405/31674ec61fc1adcda70ff0256ca44d50/ymusic/030b/055f/530b/4a0b6f24db25f0a6c1eadad7062df25d.mp3"; //选择播放的音频
 var _default =
 {
   data: function data() {
@@ -215,10 +215,10 @@ var _default =
                 reqData = {};_context3.next = 3;return (
                   (0, _find.getPersonalizedMv)(reqData));case 3:_this3.personalizedmv = _context3.sent;case 4:case "end":return _context3.stop();}}}, _callee3);}))();
     },
-    musicClick: function musicClick() {
-      music.play();
+    // musicClick(){
+    // 	music.play();
 
-    },
+    // },
     //切换tab
     tabClick: function tabClick(index) {
       this.currentIndex = index;
@@ -235,7 +235,6 @@ var _default =
     } },
 
   components: { find: find } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 17 */,

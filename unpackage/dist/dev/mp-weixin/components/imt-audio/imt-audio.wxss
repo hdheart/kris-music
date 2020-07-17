@@ -10,7 +10,7 @@
 }
 .imt-audio {
 	padding: 30rpx;
-	background: #fff;
+	background-color: rgba(38, 38, 38, 0.0);
 	border-radius: 20rpx;
 }
 .audio-wrapper {
@@ -24,7 +24,7 @@
 .audio-number {
 	font-size: 24rpx;
 	line-height: 1;
-	color: #333;
+	color: #d9dede;
 }
 .audio-slider {
 	-webkit-box-flex: 1;

@@ -38,7 +38,7 @@
 			continue:Boolean,//播放完成后是否继续播放下一首，需定义@next事件
 			color: {
 				type:String,
-				default:'#169af3'
+				default:'#faffff'
 			} //主色调
 		},
 		methods: {
@@ -137,7 +137,7 @@
 
 	.imt-audio {
 		padding: 30upx;
-		background: #fff;
+		background-color: rgba(38, 38, 38, 0.0);
 		border-radius: 20upx;
 	}
 
@@ -149,7 +149,7 @@
 	.audio-number {
 		font-size: 24upx;
 		line-height: 1;
-		color: #333;
+		color: #d9dede;
 	}
 
 	.audio-slider {
