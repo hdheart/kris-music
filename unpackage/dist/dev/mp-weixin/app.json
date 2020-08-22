@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/find/playList/playlistdetail",
     "pages/find/playList/playlistmore",
+    "pages/search/index",
     "pages/find/playList/song",
     "pages/find/playList/mv"
   ],
@@ -14,5 +15,5 @@
     "backgroundColor": "#F8F8F8"
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap5.json"
+  "sitemapLocation": "sitemap99.json"
 }

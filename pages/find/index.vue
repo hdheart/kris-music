@@ -39,7 +39,7 @@
 						<view class="head-title">
 							<text>推荐歌单</text>
 						</view>	
-						<view class="head-more"@click="clickMore">
+						<view class="head-more" @click="clickMore">
 							<text>歌单广场</text>
 							<uni-icons type="forward" size="11"></uni-icons>
 						</view>

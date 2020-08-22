@@ -48,7 +48,7 @@
 
 import { getSong, getLyric, getSongDetail } from "api/find.js"
 import imtAudio from 'components/imt-audio/imt-audio'
-import lyricItem from './playList.js'
+// import lyricItem from './playList.js'
 // var music = null;
 // music = uni.createInnerAudioContext(); //创建播放器对象
 // music.src= "http://m7.music.126.net/20191119181311/d11775fa733eab03a75fc5c8ad6be107/ymusic/030b/055f/530b/4a0b6f24db25f0a6c1eadad7062df25d.mp3"; //选择播放的音频
@@ -175,8 +175,7 @@ export default {
 		background-color: rgba(0, 0, 0, 0.3);
 	}
 	.page-body {
-		padding: 0upx;
-		
+		padding: 0upx;	
 		position : fixed;
 		bottom : 0;
 		left : 0;

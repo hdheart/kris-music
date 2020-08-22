@@ -9,9 +9,9 @@
 //     }
 // }
 
-export class lyricItem{
-  constructor(time,lyric){
-    this.time=time;
-    this.lyric=lyric;
-  }
-}
+// export class lyricItem{
+//   constructor(time,lyric){
+//     this.time=time;
+//     this.lyric=lyric;
+//   }
+// }

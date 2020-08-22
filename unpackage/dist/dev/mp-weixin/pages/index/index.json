@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "网易云音乐",
   "usingComponents": {
+    "uni-icons": "/components/uni-icons/uni-icons",
     "find": "/pages/find/index"
   }
 }

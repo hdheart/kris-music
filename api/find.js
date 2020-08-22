@@ -144,6 +144,20 @@ export async function getSongDetail(reqData) {
 		console.log('getSongDetail失败', e)
 	}
 }
-
+//get搜索
+export async function getSearch(reqData) {
+	try{
+		let res = await requestGet('/search', reqData)
+		if(res.data.code == SUCCESS){
+			return res.data.result.songs;
+			console.log('return data')
+		}else {
+			throw new Error();
+		}
+		
+	}catch(e){
+		console.log('getSearch失败', e)
+	}
+}
 
 

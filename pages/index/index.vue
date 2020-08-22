@@ -13,6 +13,11 @@
 			<view class="tab-item" :class="currentIndex == 3 ? 'active' :''" @click="tabClick(3)">
 				<text>视频</text>
 			</view>
+			<view class="tab-item" @click="tabSearch">
+			<view class="search">			
+			<uni-icons type="search" style="color: #FFFFFF;"></uni-icons>
+			</view>
+			</view>
 		</view>
 		<view v-show="currentIndex == 0"></view>
 		<view v-show="currentIndex == 1"><find :bannerList="bannerList" :personalized="personalized" :personalizedmv="personalizedmv"></find></view>
@@ -27,6 +32,7 @@
 <script>
 import { getBanner, getPersonalized, getPersonalizedMv} from 'api/find.js';
 import find from '../find/index.vue';
+import uniIcons from '../../components/uni-icons/uni-icons.vue'
 //0-pc 1-android 2-ip 3 ipad  
 // const TYPE = 1;
 const LIMIT = 6;
@@ -95,9 +101,17 @@ export default {
 				case 3:
 					break;
 			}		
-		}	
+		},
+		tabSearch() {
+			console.log('search');
+			uni.navigateTo({
+				url:'/pages/search/index',
+				// url:'/pages/find/playList/playlistmore'
+			})
+			
+		}
 	},
-	components: {find}
+	components: {find, uniIcons}
 };
 
 </script>
@@ -122,6 +136,7 @@ export default {
 				font-size: 15px;
 				color: #FFFFFF;
 				transition: all 0.1s ease;
+				padding-bottom: 5rpx;
 				&:last-child {
 					position: absolute;
 					bottom: 10%;
@@ -142,6 +157,15 @@ export default {
 			}
 		}
 		
+	}
+	.search{
+		// align-items: center;
+		// padding-left: 10px;
+		margin-right: 50rpx;
+		padding-top: 10px; 
+		// color: #FFFFFF;
+		// font-size: large; 
+		// color: #FFFFFF ;
 	}
 }
 

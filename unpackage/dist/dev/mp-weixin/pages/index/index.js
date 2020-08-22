@@ -99,7 +99,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
+var components = {
+  uniIcons: function() {
+    return __webpack_require__.e(/*! import() | components/uni-icons/uni-icons */ "components/uni-icons/uni-icons").then(__webpack_require__.bind(null, /*! @/components/uni-icons/uni-icons.vue */ 63))
+  }
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -135,7 +139,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 17));
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 17));
 
 
 
@@ -162,7 +166,13 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-var _find = __webpack_require__(/*! api/find.js */ 20);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var find = function find() {__webpack_require__.e(/*! require.ensure | pages/find/index */ "pages/find/index").then((function () {return resolve(__webpack_require__(/*! ../find/index.vue */ 55));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+
+
+
+
+
+var _find = __webpack_require__(/*! api/find.js */ 20);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var find = function find() {__webpack_require__.e(/*! require.ensure | pages/find/index */ "pages/find/index").then((function () {return resolve(__webpack_require__(/*! ../find/index.vue */ 70));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniIcons = function uniIcons() {__webpack_require__.e(/*! require.ensure | components/uni-icons/uni-icons */ "components/uni-icons/uni-icons").then((function () {return resolve(__webpack_require__(/*! ../../components/uni-icons/uni-icons.vue */ 63));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+
 
 //0-pc 1-android 2-ip 3 ipad  
 // const TYPE = 1;
@@ -232,9 +242,18 @@ var _default =
         case 3:
           break;}
 
+    },
+    tabSearch: function tabSearch() {
+      console.log('search');
+      uni.navigateTo({
+        url: '/pages/search/index'
+        // url:'/pages/find/playList/playlistmore'
+      });
+
     } },
 
-  components: { find: find } };exports.default = _default;
+  components: { find: find, uniIcons: uniIcons } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 17 */,
