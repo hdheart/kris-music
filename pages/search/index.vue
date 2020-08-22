@@ -3,12 +3,12 @@
 		<view class="tabSearch">
 			<input type="text" style="flex-grow: 2;" value=""  placeholder="输入歌曲" @input="InputValue"/>		
 			<view class="" @click="search">	
-			<uni-icons type="search" style="flex-grow: 1;text-align: center;padding-right: 40px;"></uni-icons>				
+			<uni-icons type="search" @click="search" style="flex-grow: 1;text-align: center;padding-right: 40px;"></uni-icons>				
 			</view>
 		</view>
 		<!-- <hr style="margin-left: 10px;margin-bottom: 20px; width: 80%; color='grey';"> -->
 		<!-- <hr> -->
-		<view class="historySearch" style="margin-bottom: 10px;">
+		<view class="historySearch" style="margin-bottom: 10px;padding-left: 10px;padding-top: 10px;">
 			<text>历史记录</text>
 			
 		</view>

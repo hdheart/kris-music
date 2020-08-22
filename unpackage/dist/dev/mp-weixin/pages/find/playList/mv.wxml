@@ -1,0 +1,1 @@
+<block wx:if="{{mv}}"><view><view class="container"><view class="mv"><text>{{mv.url}}</text><video src="{{mv.url}}" controls></video></view></view></view></block>

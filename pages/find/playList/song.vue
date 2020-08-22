@@ -31,7 +31,9 @@
 				<!-- <button @click="getLyricTime" type="default">btn</button> -->
 				
 			<!-- <text>{{ lyric.lyric }}</text> -->
-				
+				<view class="lyric">
+					{{lyricString}}
+				</view>
 				<view class="bg-image">
 				<image :src="imgUrl" mode="aspectFill"></image>
 				</view>
@@ -39,6 +41,7 @@
 				<view class="ft-image">
 				<image :src="imgUrl" mode="aspectFill"></image>
 				</view>
+				
 	</view>
 	</view>
 	
@@ -79,7 +82,7 @@ export default {
 			
 			
 			],
-			lyricArray : [],
+			lyricString : [],
 			imgUrl : '',
 			
 		} 
@@ -126,7 +129,7 @@ export default {
 		},
 		parselyric(lyric){		
 			     console.log('---');
-			    let RegExp=/\[(\d*:\d*\.\d*)\]/;
+			    let RegExp=/\s*\n*\[.*?\]\s*/;
 			    let arr='',timeArr=[],lyricArr=[],mergeArr=[];
 			    let ar = '';
 				let mix = '';
@@ -140,10 +143,16 @@ export default {
 				// console.log(finmix)
 				// this.time = finmix
 				ar = arr.slice(-2)[0];
-				mix = ar.split(']')[0].substr(1).split(':')
-				finmix = Number(mix[1]) + Number(mix[0]*60)
-				this.time = finmix
-				console.log(finmix)
+				mix = ar.split(']')[0].substr(1).split(':');
+				finmix = Number(mix[1]) + Number(mix[0]*60);
+				this.time = finmix;
+				console.log(finmix);
+				console.log(arr.toString());
+				//v => !!v 删除虚值
+				let RegExp2 = arr.toString().split(RegExp).filter(v => !!v);
+				console.log(RegExp2);
+				this.lyricString = RegExp2;
+				
 			     
 			},
 		
@@ -234,6 +243,7 @@ export default {
 		}
 	}
 	.ft-image{
+	
 		padding-top: 300upx;
 		text-align: center;
 		image{
@@ -247,5 +257,11 @@ export default {
 			
 		}
 		
+	}
+	.lyric{
+		position: absolute;
+		padding: 10px;
+		color: red;
+		// z-index: -1;
 	}
 </style>
