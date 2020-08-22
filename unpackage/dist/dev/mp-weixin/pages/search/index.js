@@ -174,7 +174,7 @@ var _find = __webpack_require__(/*! api/find.js */ 24);function _interopRequireD
   data: function data() {
     return {
       searchResult: null,
-      value: 'aimyon',
+      value: '高山低谷',
       id: undefined,
       playlistdetail: null };
 

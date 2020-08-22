@@ -39,7 +39,7 @@
 		data() {
 			return {
 			searchResult : null,
-			value : 'aimyon',
+			value : '高山低谷',
 			id : undefined,
 			playlistdetail : null,
 			}
