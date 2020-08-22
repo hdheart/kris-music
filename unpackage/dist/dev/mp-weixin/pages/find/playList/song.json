@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "单曲",
-  "usingComponents": {
-    "imt-audio": "/components/imt-audio/imt-audio"
-  }
-}
