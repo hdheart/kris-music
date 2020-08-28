@@ -31,16 +31,18 @@
 				<!-- <button @click="getLyricTime" type="default">btn</button> -->
 				
 			<!-- <text>{{ lyric.lyric }}</text> -->
-				<view class="lyric">
-					{{lyricString}}
+				<view class="lyric" v-if="!flag" @click="ClickFlag" >
+					<bing-lyric :lyrics="lyrics"  :curTime="curTime" :centerStyle="centerStyle" :areaStyle="cuAreaStyle" :lyricStyle="lyricStyle"
+					 @centerBtnClick="centerBtnClick" @copyLyrics="copy"></bing-lyric>
 				</view>
 				<view class="bg-image">
+				<image :src="imgUrl" mode="aspectFill" ></image>
+				</view>
+				</view>
+				<view class="ft-image" v-show="flag" @click="ClickFlag">
 				<image :src="imgUrl" mode="aspectFill"></image>
 				</view>
-				</view>
-				<view class="ft-image">
-				<image :src="imgUrl" mode="aspectFill"></image>
-				</view>
+				<!-- <img src="static/images/btn.png" alt=""> -->
 				
 	</view>
 	</view>
@@ -51,6 +53,7 @@
 
 import { getSong, getLyric, getSongDetail } from "api/find.js"
 import imtAudio from 'components/imt-audio/imt-audio'
+import bingLyric from 'components/bing-lyric/bing-lyric.vue'
 // import lyricItem from './playList.js'
 // var music = null;
 // music = uni.createInnerAudioContext(); //创建播放器对象
@@ -65,6 +68,7 @@ export default {
 			songdetail : null,
 			now : 0,
 			time : 180,
+			flag : true,
 			current: {
 				name:'大碗宽面',
 				author:'kris',
@@ -79,11 +83,20 @@ export default {
 					// src: 'http://m8.music.126.net/20191121133405/31674ec61fc1adcda70ff0256ca44d50/ymusic/030b/055f/530b/4a0b6f24db25f0a6c1eadad7062df25d.mp3',
 					duration: 120
 				},
-			
-			
 			],
 			lyricString : [],
 			imgUrl : '',
+			cuAreaStyle: {
+				width: '90vw',
+				// height: '100vh'
+			},
+			lyricStyle: {
+			},
+			curTime: 0,
+			lyrics : null,
+			centerStyle: {
+				btnImg: '/static/images/btn.png',
+			},
 			
 		} 
 	},
@@ -96,6 +109,8 @@ export default {
 		this.id = options.id;
 		console.log(options.id)
 		this.init();
+		this.makeTime()
+		
 		
 		
 	},
@@ -128,7 +143,7 @@ export default {
 			// console.log(this.lyric.lyric)
 		},
 		parselyric(lyric){		
-			     console.log('---');
+			    console.log('---');
 			    let RegExp=/\s*\n*\[.*?\]\s*/;
 			    let arr='',timeArr=[],lyricArr=[],mergeArr=[];
 			    let ar = '';
@@ -147,17 +162,28 @@ export default {
 				finmix = Number(mix[1]) + Number(mix[0]*60);
 				this.time = finmix;
 				console.log(finmix);
-				console.log(arr.toString());
+				console.log(arr);
 				//v => !!v 删除虚值
 				let RegExp2 = arr.toString().split(RegExp).filter(v => !!v);
 				console.log(RegExp2);
 				this.lyricString = RegExp2;
+				this.lyrics = arr
 				
 			     
 			},
-		
-		
-		//播放音频
+		ClickFlag(){
+			this.flag = !this.flag;
+			console.log(this.flag)
+		},
+		makeTime() {
+			let i = 0
+			for (i;i<500;i++){
+				setTimeout(this.out, i*500,0.5)
+			}
+		},
+		out(t){
+			this.curTime += t
+		}
 		
 		
 				
@@ -165,14 +191,16 @@ export default {
 		
 	watch:{
 			lyric(){
-				this.parselyric(this.lyric.lyric)
-				
+				this.parselyric(this.lyric.lyric)		
 			}
-		},
+		},	
+
 	components: {
 		imtAudio,
+		bingLyric
 		
 		}
+		
 	
 	
 }
@@ -261,7 +289,9 @@ export default {
 	.lyric{
 		position: absolute;
 		padding: 10px;
-		color: red;
 		// z-index: -1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 </style>

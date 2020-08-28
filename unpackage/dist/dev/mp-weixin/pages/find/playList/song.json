@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "单曲",
   "usingComponents": {
-    "imt-audio": "/components/imt-audio/imt-audio"
+    "imt-audio": "/components/imt-audio/imt-audio",
+    "bing-lyric": "/components/bing-lyric/bing-lyric"
   }
 }

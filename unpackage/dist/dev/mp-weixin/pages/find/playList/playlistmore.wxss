@@ -24,7 +24,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.playlist.data-v-50172f60 {
+.playlist.data-v-4d9f9cf2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -34,40 +34,40 @@
   -webkit-justify-content: space-between;
           justify-content: space-between;
 }
-.playlist .playlist-content.data-v-50172f60 {
-    width: 210rpx;
-    position: relative;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-            flex-direction: column;
+.playlist .playlist-content.data-v-4d9f9cf2 {
+  width: 210rpx;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
 }
-.playlist .playlist-content .content-item-img.data-v-50172f60 {
-      position: relative;
-      width: 100%;
-      height: 210rpx;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-              align-items: center;
-      margin: 10rpx 10rpx 10rpx 0rpx;
+.playlist .playlist-content .content-item-img.data-v-4d9f9cf2 {
+  position: relative;
+  width: 100%;
+  height: 210rpx;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin: 10rpx 10rpx 10rpx 0rpx;
 }
-.playlist .playlist-content .content-item-img image.data-v-50172f60 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 10rpx;
-        z-index: -1;
+.playlist .playlist-content .content-item-img image.data-v-4d9f9cf2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+  z-index: -1;
 }
-.playlist .playlist-content text.data-v-50172f60 {
-      display: -webkit-box;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
+.playlist .playlist-content text.data-v-4d9f9cf2 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 

@@ -24,10 +24,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.container.data-v-0a035984 {
+.container.data-v-60764375 {
   background-color: rgba(0, 0, 0, 0.3);
 }
-.page-body.data-v-0a035984 {
+.page-body.data-v-60764375 {
   padding: 0rpx;
   position: fixed;
   bottom: 0;
@@ -35,7 +35,7 @@
   right: 0;
   height: 105px;
 }
-.list.data-v-0a035984 {
+.list.data-v-60764375 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -51,23 +51,23 @@
   margin-top: 20rpx;
   color: #333;
 }
-.list-title.data-v-0a035984 {
+.list-title.data-v-60764375 {
   font-size: 28rpx;
   line-height: 88rpx;
 }
-.list-pic.data-v-0a035984 {
+.list-pic.data-v-60764375 {
   display: none;
   width: 28rpx;
   height: 28rpx;
 }
-.active.data-v-0a035984 {
+.active.data-v-60764375 {
   background: #169af3;
   color: #fff;
 }
-.active .list-pic.data-v-0a035984 {
+.active .list-pic.data-v-60764375 {
   display: block;
 }
-.bg-image.data-v-0a035984 {
+.bg-image.data-v-60764375 {
   position: fixed;
   top: 0;
   left: 0;
@@ -75,29 +75,38 @@
   height: 100%;
   z-index: -1;
 }
-.bg-image image.data-v-0a035984 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-filter: blur(20rpx);
-            filter: blur(20rpx);
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+.bg-image image.data-v-60764375 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(20rpx);
+          filter: blur(20rpx);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
-.ft-image.data-v-0a035984 {
+.ft-image.data-v-60764375 {
   padding-top: 300rpx;
   text-align: center;
 }
-.ft-image image.data-v-0a035984 {
-    text-align: center;
-    width: 300rpx;
-    height: 300rpx;
+.ft-image image.data-v-60764375 {
+  text-align: center;
+  width: 300rpx;
+  height: 300rpx;
 }
-.lyric.data-v-0a035984 {
+.lyric.data-v-60764375 {
   position: absolute;
   padding: 10px;
-  color: red;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
 }
 
